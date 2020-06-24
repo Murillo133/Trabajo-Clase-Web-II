@@ -27,12 +27,19 @@ namespace clase_4.Controllers
       _config = config;
     }
 
+  
+    // [HttpGet]
+    // public async Task<ActionResult<IEnumerable<User>>> GetUsers()
+    // {
+    //   return await _context.Users.ToListAsync();
+    // }
+
     [HttpPost("register")]
-    public async Task<ActionResult<Vehicle>> Register(User request){
+    public async Task<ActionResult<User>> Register(User request){
       _context.Users.Add(request);
       await _context.SaveChangesAsync();
 
-      return CreatedAtAction("GetVehicle", new { id = request.Id }, request);
+      return CreatedAtAction("GetUser", new { id = request.Id }, request);
     }
 
     [HttpPost("login")]

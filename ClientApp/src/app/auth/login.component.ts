@@ -19,7 +19,7 @@ export class LoginComponent {
   }
 
   login() {
-    console.log(this.user);
+   
 
     this.http.post(this.baseUrl + 'api/auth/login', this.user).subscribe((data) => {
     sessionStorage.setItem('token', data["token"])

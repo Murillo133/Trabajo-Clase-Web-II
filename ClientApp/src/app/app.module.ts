@@ -11,6 +11,7 @@ import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { VehiclesComponent } from "./vehicles/vehicles.component";
 import { LoginComponent } from "./auth/login.component";
+import { RegisterComponent } from "./register/register.component";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { LoginComponent } from "./auth/login.component";
     CounterComponent,
     FetchDataComponent,
     VehiclesComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -35,8 +37,10 @@ import { LoginComponent } from "./auth/login.component";
       { path: 'fetch-data', component: FetchDataComponent },
       //https://localhost:5001/vehicles
       { path: 'vehicles', component: VehiclesComponent },
-       //https://localhost:5001/vehicles
-       { path: 'login', component: LoginComponent },
+      //https://localhost:5001/login
+      { path: 'login', component: LoginComponent },
+      //https://localhost:5001/register
+      { path: 'register', component: RegisterComponent },
     ])
   ],
   providers: [],
