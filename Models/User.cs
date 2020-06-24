@@ -1,4 +1,6 @@
-using System.Text.Json.Serialization;
+using Newtonsoft.Json;
+
+
 
 namespace clase_4.Models
 {
